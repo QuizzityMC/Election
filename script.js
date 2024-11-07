@@ -15,7 +15,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    
+
     auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
         console.log('Login successful:', userCredential.user);
         window.location.href = "election.html"; // Redirect to the election analysis page
