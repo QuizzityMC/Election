@@ -1,4 +1,4 @@
-// Initialize Firebase Authentication
+// Firebase Authentication State
 auth.onAuthStateChanged(user => {
     if (user) {
         document.getElementById('loginContainer').style.display = 'none';
@@ -8,7 +8,7 @@ auth.onAuthStateChanged(user => {
     }
 });
 
-// Login function
+// Login Function
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
