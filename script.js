@@ -1,7 +1,3 @@
-// Initialize Firestore and Auth after Firebase is initialized
-const db = firebase.firestore();
-const auth = firebase.auth();
-
 // Firebase Authentication State
 auth.onAuthStateChanged(user => {
     if (user) {
