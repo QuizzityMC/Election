@@ -1,16 +1,3 @@
-// Ensure Firebase is initialized correctly
-const firebaseConfig = {
-    apiKey: "AIzaSyCCtN-Fw5ScpQinAxnqDWkXcttxIc0av5Q",
-    authDomain: "canary-chat-629e2.firebaseapp.com",
-    projectId: "canary-chat-629e2",
-    storageBucket: "canary-chat-629e2.firebasestorage.app",
-    messagingSenderId: "742675193071",
-    appId: "1:742675193071:web:fbeade23f58f6c46f64f1a",
-    measurementId: "G-HNKDV3VDPJ"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 // Initialize Firestore and Auth after Firebase is initialized
 const db = firebase.firestore();
 const auth = firebase.auth();
