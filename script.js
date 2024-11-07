@@ -1,9 +1,15 @@
+// Initialize Firestore and Auth after Firebase is initialized
+const db = firebase.firestore();
+const auth = firebase.auth();
+
 // Firebase Authentication State
 auth.onAuthStateChanged(user => {
     if (user) {
+        console.log('User logged in:', user);
         document.getElementById('loginContainer').style.display = 'none';
         fetchAndDisplayQuestions();
     } else {
+        console.log('No user logged in');
         document.getElementById('loginContainer').style.display = 'block';
     }
 });
@@ -14,7 +20,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     
-    auth.signInWithEmailAndPassword(email, password).catch(error => {
+    auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
+        console.log('Login successful:', userCredential.user);
+    }).catch(error => {
+        console.error('Login failed:', error.message);
         alert('Login failed: ' + error.message);
     });
 });
@@ -57,6 +66,7 @@ function fetchAndDisplayQuestions() {
                     // Reset the answer form
                     this.reset();
                 }).catch((error) => {
+                    console.error('Error adding answer:', error);
                     alert('Error adding answer: ' + error);
                 });
             });
@@ -71,5 +81,7 @@ function fetchAndDisplayQuestions() {
                 });
             });
         });
+    }).catch((error) => {
+        console.error('Error fetching questions:', error);
     });
 }
