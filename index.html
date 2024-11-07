@@ -39,7 +39,8 @@
             measurementId: "G-HNKDV3VDPJ"
         };
         firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
+        window.db = firebase.firestore();
+        window.auth = firebase.auth();
     </script>
 
     <!-- Add your custom script -->
