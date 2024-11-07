@@ -26,16 +26,16 @@
 </head>
 <body>
     <h1>Election Analysis Platform</h1>
-    <form id="questionForm">
+    <div id="questionsContainer"></div>
+    <form id="answerForm" style="display:none;">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="residence">Place of Residence:</label>
         <input type="text" id="residence" name="residence" required>
-        <label for="question">Question:</label>
-        <textarea id="question" name="question" required></textarea>
+        <label for="answer">Answer:</label>
+        <textarea id="answer" name="answer" required></textarea>
         <button type="submit">Submit</button>
     </form>
-    <div id="questionsContainer"></div>
     <script src="script.js"></script>
 </body>
 </html>
