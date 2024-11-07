@@ -35,3 +35,10 @@ label, input, textarea, button {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.answer {
+    background-color: #e0e0e0;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
