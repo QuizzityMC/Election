@@ -1,5 +1,6 @@
 // Firebase Authentication State
 auth.onAuthStateChanged(user => {
+    console.log('Auth state changed:', user);
     if (user) {
         console.log('User logged in:', user);
         window.location.href = "election.html"; // Redirect to the election analysis page
