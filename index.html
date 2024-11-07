@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thalizar Times Elections</title>
+    <title>Login - Thalizar Times Elections</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="background"></div>
-    <h1>Thalizar Times Elections</h1>
+    <h1>Login to Thalizar Times Elections</h1>
     <div id="loginContainer">
         <form id="loginForm">
             <label for="email">Email:</label>
@@ -18,7 +18,9 @@
             <button type="submit">Login</button>
         </form>
     </div>
-    <div id="questionsContainer"></div>
+    <div id="registerRedirect">
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
 
     <!-- Add Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -37,7 +39,6 @@
             measurementId: "G-HNKDV3VDPJ"
         };
         firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
         const auth = firebase.auth();
     </script>
 
