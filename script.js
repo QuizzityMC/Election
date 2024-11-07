@@ -1,3 +1,4 @@
+// Make sure firebase, db, and auth are not re-declared
 // Firebase Authentication State
 auth.onAuthStateChanged(user => {
     if (user) {
